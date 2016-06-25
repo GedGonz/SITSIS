@@ -1,0 +1,14 @@
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\Entidad.dll
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\Entidad.pdb
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\obj\Debug\Entidad.dll
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\obj\Debug\Entidad.pdb
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\Entidad.dll.config
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\EntityFramework.dll
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\EntityFramework.xml
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+c:\Users\user\documents\visual studio 2012\Projects\SITSIS\Entidad\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
