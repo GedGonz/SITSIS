@@ -1,0 +1,474 @@
+﻿@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>New</h2>*@
+<br>
+<br>
+<div class="container">
+@using (Html.BeginForm("AltaLibros", "Libros", FormMethod.Post)) 
+{
+	<div class="panel box box-primary">
+		<div class="box-header with-border">
+            <h3 class="box-title">Datos Estudiante</h3>
+			
+		</div>
+		<div class="box-body">
+		<div class="row">
+
+			<div class="col-md-10">
+
+				<br>
+				<br>
+				<div class="row">
+					
+					<div class="col-md-4">
+					<p style=" width: 150px;" class="stylep">Nº Carnet:</p>
+
+
+						<input type="text" name="NumCarnet" class="form-control">
+					</div>
+
+					<div class="col-md-4">
+
+					<<input type="text" name="Primernombre" class="form-control">
+					</div>
+					<div class="col-md-4">
+					<p  class="stylep">Segundo Nombre:</p>
+
+					<input type="text" name="Segundornombre" class="form-control">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+					<p  class="stylep">Primer Apellido:</p>
+
+					<input type="text" name="Primerapellido" class="form-control">
+					</div>
+					<div class="col-md-4">
+					<p  class="stylep">Segundo Apellido:</p>
+					<input type="text" name="Segundoapellido" class="form-control">
+					</div>
+					<div class="col-md-4">
+					<p  class="stylep">Edad:</p>
+
+					<input type="text" name="Edad" class="form-control">
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-2">
+				<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
+				<br>
+
+				<div class="fileupload fileupload-new" data-provides="fileupload">
+                         <span class="btn btn-default btn-group-justified btn-sm btn-file">
+                           <span class="fileupload-new"> Photo</span>
+                           <span class="fileupload-exists"> Change</span>
+                           <%=f.file_field(:Imag,:id=>"uploadBtn") %>
+                           <!--<input id="PhotoUser" name="PhotoUser"  type="file">-->
+
+                           </span>
+                         <!--<span class="fileupload-preview margin-left"></span>
+                         <a id="FileNameSelect"  href="#" class="close fileupload-exists"  data-dismiss="fileupload" style="float: none"> x</a>-->
+                </div>
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			 <div class="col-md-10">
+			 <p s class="stylep">Direccion:</p>
+
+			 <textarea type="text" name="Direccionestu" class="form-control"></textarea>
+			 </div>
+
+			 <div class="col-md-2">
+			 <br>
+				 <p class="stylep">Genero:</p>
+				 <%=radio_button_tag(:Genero, "Masculino") %> Masculino
+				 <br>
+				 <%=radio_button_tag(:Genero, "Femenino") %> Femenino
+				 <!--<%=f.text_field(:Genero,id:"Genero",class:"form-control")%>-->
+				 <!--<input type="text" name="Genero" class="form-control"></input>-->
+			 </div>
+
+		</div>
+		<div class="row">
+			 <div class="col-md-3">
+			  <p  class="stylep">Cedula:</p>
+
+				 <input type="text" name="Celular" class="form-control"></input>
+			 </div>
+			 <div class="col-md-3">
+			 <p class="stylep">Celular:</p>
+
+				 <input type="text" name="Celular" class="form-control"></input>
+			 </div>
+			 <div class="col-md-3">
+			 <p class="stylep">Telefono:</p>
+
+				 <input type="text" name="Telefono" class="form-control"></input>
+			 </div>
+			 <div class="col-md-3">
+			 <p class="stylep">Tipo Sanguineo:</p>
+			@* <%=f.select(:Tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>*@
+				 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
+			 </div>
+			
+			 
+
+
+		</div>
+		<div class="row">
+
+			 <div class="col-md-3">
+			 <p class="stylep">Estado Civil:</p>
+			 @*<%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>*@
+				 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
+			 </div>
+			 <div class="col-md-3">
+			 <p class="stylep">Pais:</p>
+			 @*<%=collection_select(:Pais, :id, Country.all,:id, :Pais,{},{:class=>"form-con*@trol"})%>
+
+			  <!--<select name="" id="" class="form-control">
+				  <option value="0">Seleccione</option>
+			  </select>-->
+			 </div>
+			 <div class="col-md-3">
+			 <p class="stylep">Departamento:</p>
+			@* <%=collection_select(:Departamento, :id, Departamento.all,:id, :Departamento,{},{:class=>"form-control"})%>*@
+
+			  <!--<select name="" id="" class="form-control">
+				  <option value="0">Seleccione</option>
+			  </select>-->
+			 </div>
+			 <div class="col-md-3">
+			 <p class="stylep">Municipio:</p>
+			@* <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>*@
+
+			  <!--<select name="" id="" class="form-control">
+				  <option value="0">Seleccione</option>
+			  </select>-->
+			 </div>
+			  <div class="col-md-3">
+			 </div>
+
+		</div>
+		</div>
+	</div>
+
+
+	<br>
+	<div class="panel box box-primary">
+		<div class="box-header with-borde">
+            <h3 class="box-title">Procedencia</h3>
+		</div>
+		<div class="panel-body">
+		<%= f.fields_for :estudiante do |et| %>
+			<%= et.fields_for :estudio do |e| %>
+				<div class="row">
+
+					<div class="col-md-3">
+						<p class="stylep">Estudio:</p>
+
+					<input type="text" name="Estudio" class="form-control"></input>
+					</div>
+					<div class="col-md-3">
+						<p class="stylep">Año:</p>
+
+						<input type="text" name="Ano" class="form-control"></input>
+					</div>
+					<div class="col-md-3">
+						<p class="stylep">Presedencia:</p>
+
+						<input type="text" name="Presedencia" class="form-control"></input>
+					</div>
+					<div class="col-md-3">
+						<p class="stylep">Tipo:</p>
+
+						<select name="" id="" class="form-control">
+							<option value="0">seleccione</option>
+						</select>
+					</div>
+				</div>
+			<%end%>
+		<%end%>
+		</div>
+	</div>
+		<br>
+	<div class="panel box box-primary">
+		<div class="box-header with-borde">
+			 <h3 class="box-title">Lugar de Trabajo</h3>
+		</div>
+		<div class="panel-body">
+		<%= f.fields_for :trabajo do |t| %>
+			<div class="row">
+				<div class="col-md-3">
+					<p class="stylep">Centro de Trabajo:</p>
+
+					<input type="text" name="Lugartrabajo" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+					<p class="stylep">Cargo:</p>
+
+					<input type="text" name="Cargo" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+					<p class="stylep">Tiempo:</p>
+
+					<input type="text" name="Tiempo" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+					<p class="stylep">Telefono:</p>
+
+					<input type="text" name="Telefono" class="form-control"></input>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p class="stylep">Direccion:</p>
+
+					<textarea type="text" name="Direcciontrabajo" class="form-control"></textarea>
+				</div>
+			</div>
+		<%end%>
+		</div>
+	</div>	
+
+
+	<br>
+	<div class="panel box box-primary">
+		<div class="box-header with-borde">
+		<h3 class="box-title">Familiar</h3>
+		</div>
+		<div class="panel-body">
+			
+			<div class="row">
+
+				<div class="col-md-3">
+				<p class="stylep">Cedula:</p>
+
+				<input type="text" name="cedulatutor1" class="form-control" placeholder="Digite la Cedula">
+				</div>
+				<div class="col-md-3">
+				<p class="stylep">Nombre:</p>
+
+				<input type="text" name="Nombretutor1" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+				<p class="stylep">Apellido:</p>
+				<input type="text" name="Apellidotutor1" class="form-control"></input>
+				</div>
+				<div class="col-md-2">
+				<br>
+				<br>
+				<span data-toggle="modal" data-target="#MFamiliar"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
+				<span data-toggle="modal" data-target="#MBusqueda"><%=icon('fa fa-search fa-lg')%></span>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-3">
+				<p class="stylep">Cedula:</p>
+				<input type="text" name="cedulatutor2" class="form-control" placeholder="Digite la Cedula">
+				</div>
+				<div class="col-md-3">
+				<p class="stylep">Nombre:</p>
+				<input type="text" name="Nombretutor2" class="form-control"></input>
+				</div>
+				<div class="col-md-3">
+				<p class="stylep">Apellido:</p>
+
+				<input type="text" name="Apellidotutor2" class="form-control"></input>
+				</div>
+				<div class="col-md-2">
+				<br>
+				<br>
+				<span data-toggle="modal" data-target="#MFamiliar"><%=icon('fa fa-pencil-square-o fa-lg')%></span>
+				<span data-toggle="modal" data-target="#MBusqueda"><%=icon('fa fa-search fa-lg')%></span>
+				</div>
+				<div class="col-md-1">
+				</div>
+		    </div>
+		</div>
+	</div>
+    
+    <div class="panel box box-primary">
+      <div class="panel-heading text-right">
+		<div class="form-group">
+			<a class="btn btn-danger">Cancelar </a>
+			@*<%= f.submit("Guardar",:class=>"btn btn-primary") %>*@
+		</div>
+			
+	  </div>
+    </div>@*
+	<div class="panel panel-default">
+
+	</div>*@
+
+	<br>
+	<br>
+
+}
+
+	<!-- Modal Formulario-->
+	<div class="modal fade" id="MFamiliar" tabindex="-1" role="dialog" aria-pledby="myModalp" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-p="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	        <h4 class="modal-title" id="myModalp">Registro de Tutor</h4>
+	      </div>
+
+	      <div class="modal-body">
+	     
+				<div class="row">
+					<div class="col-md-10">
+						<div class="row">
+							<div class="col-md-4">
+							<p class="stylep">Primer Nombre:</p>
+
+							<input type="text" name="Primernombre" class="form-control">
+							</div>
+							<div class="col-md-4">
+							<p class="stylep">Segundo Nombre:</p>
+                            <input type="text" name="Segundornombre" class="form-control">
+							</div>
+							<div class="col-md-4">
+							<p class="stylep">Primer Apellido:</p>
+                            <input type="text" name="Primerapellido" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							
+							<div class="col-md-4">
+							<p class="stylep">Segundo Apellido:</p>
+
+							<input type="text" name="Segundoapellido" class="form-control">
+							</div>
+							<div class="col-md-4">
+							<p class="stylep">Edado:</p>
+							<input type="text" name="Edad" class="form-control">
+							</div>
+							<div class="col-md-4">
+							<p class="stylep">Cedula:</p>
+							<<input type="text" name="Edad" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+					<%= image_tag "adefault_user.png", :alt => "User",:class=>"PictureDefault", :title => "User"%>
+
+						<div class="fileupload fileupload-new" data-provides="fileupload">
+		                         <span class="btn btn-default btn-group-justified btn-sm btn-file">
+		                           <span class="fileupload-new"> Photo</span>
+		                           <span class="fileupload-exists"> Change</span>
+		                           <%=f.file_field(:Imag,:id=>"uploadBtn") %>
+		                           </span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					 <div class="col-md-12">
+					 <p class="stylep">Direccion:</p>
+					 <%=f.text_area(:Direccion,class:"form-control")%>
+					 <!--<textarea type="text" name="Direccionestu" class="form-control"></textarea>-->
+					 </div>
+				</div>
+				<div class="row">
+					 <div class="col-md-3">
+						 <p class="stylep">Tipo Sanguineo:</p>
+						 @*<%=f.select(:Tiposanguineo,['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>*@
+						 <!--<input type="text" name="tiposanguineo" class="form-control"></input>-->
+					 </div>
+					 <div class="col-md-3">
+						 <p class="stylep">Estado Civil:</p>
+@*						 <%=f.select(:Estadocivil,['Solter@', 'Casad@', 'Divorciad@', 'Viud@', 'Union de hechos'], {include_blank: 'Seleccione'}, { :class => 'form-control' })%>*@
+						 <!--<input type="text" name="Estadocivil" class="form-control"></input>-->
+					 </div>
+					 <div class="col-md-3">
+						 <p class="stylep">Celular:</p>
+						 <%=f.text_field(:Celular,id:"Celular",class:"form-control")%>
+						 <!--<input type="text" name="Celular" class="form-control"></input>-->
+					 </div>
+					 <div class="col-md-3">
+						 <p class="stylep">Telefono:</p>
+						 <%=f.telephone_field(:Telefono,id:"Telefono",class:"form-control")%>
+						 <!--<input type="text" name="Telefono" class="form-control"></input>-->
+					 </div>
+				</div>
+				<div class="row">
+					 <div class="col-md-3">
+						 <p class="stylep">Genero:</p>
+						  <%=radio_button_tag(:Genero, "Masculino") %> Masculino <br>
+					 	  <%=radio_button_tag(:Genero, "Femenino") %> Femenino
+						 <!--<input type="text" name="Genero" class="form-control"></input>-->
+					 </div>
+					 <div class="col-md-3">
+					  <p class="stylep">Municipio:</p>
+					  <!--<select name="" id="" class="form-control">
+						  <option value="0">Seleccione</option>
+					  </select>-->
+					 <%=collection_select(:Municipio, :id, Municipio.all,:id, :Municipio,{},{:class=>"form-control"})%>
+					 </div>
+					 <div class="col-md-3">
+					 </div>
+					  <div class="col-md-3">
+					 </div>
+				</div>
+		 
+		  	<div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <%= f.submit("Guardar",:class=>"btn btn-primary") %>
+	      </div>
+	     <%end%>
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Modal Table -->
+	<div class="modal fade" id="MBusqueda" tabindex="-1" role="dialog" aria-pledby="myModalp" aria-hidden="true">
+	  <div class="modal-dialog tamanio" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-p="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	        <h4 class="modal-title" id="myModalp">Buscar Familiar</h4>
+	      </div>
+	      <div class="modal-body">
+
+				<table class="table table-hover" class="tablefind" id="tablefind">
+					<thead>
+						<tr>
+							<th>Codigo</th>
+							<th>Parentesco</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>Cedula</th>
+							<th>Edad</th>
+							<th>Celular</th>
+							<th>Municipio</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+	      </div>
+	      <div class="modal-footer">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+    </div>
